@@ -44,6 +44,7 @@ import {
     const storageBackendName = import.meta.env.VITE_APP_STORAGE_BACKEND || '';
   
     if (storageBackends.has(storageBackendName)) {
+      console.log(`Using storage backend firebase`);
       storageBackend = storageBackends.get(storageBackendName) as StorageBackend;
     } else {
       console.warn("No storage backend found, default to firebase");
